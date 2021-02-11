@@ -14,7 +14,7 @@ static struct plugin_info hello_world_analyzer_plugin_info = {
 
 static void hello_world_analyzer_callback (void *gcc_data, void *user_data)
 {
-    fprintf(stderr, "Hello, from the plugin callback!\n");
+    fprintf(stderr, "-----\nHello, from the plugin callback!\n-----\n");
 }
 
 __visible int plugin_init (struct plugin_name_args *plugin_info, struct plugin_gcc_version *version)
@@ -23,9 +23,8 @@ __visible int plugin_init (struct plugin_name_args *plugin_info, struct plugin_g
     error(G_("Incompatible GCC/Plugin versions!"));
     return 1;
   }
-
   const char *plugin_name = plugin_info->base_name;
-    fprintf(stderr, "Hello, from plugin_init!\n");
+    fprintf(stderr, "Hello-World plugin registered!\n");
   register_callback (plugin_name,
          PLUGIN_ANALYZER_INIT,
          hello_world_analyzer_callback,
