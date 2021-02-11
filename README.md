@@ -10,4 +10,4 @@ Then make the necessary changes to `scripts/gcc-plugins/Kconfig` and `scripts/Ma
 After this, when you build the kernel, specify the path for the version of GCC with analyzer support (>=10) if it's not 
 the default installation, and include the option `-fanalyzer`.
 
-You should be able to see `Hello, from plugin_init!` and `Hello, from the plugin callback!` for every file compiled.
+You should be able to see `Hello, from the plugin callback!` for every file compiled if you've enabled the analyzer option.
