@@ -5,7 +5,7 @@ and can be used while building the Linux Kernel.
 
 Copy the plugin file to `scripts/gcc-plugins`. 
 
-Then make the necessary changes to `scripts/gcc-plugins/Kconfig` and `scripts/Makefile.gcc-plugins` to include thi plugin in the list of plugins.
+Then make the necessary changes to `scripts/gcc-plugins/Kconfig` and `scripts/Makefile.gcc-plugins` to include this plugin in the list of plugins.
 
 After this, when you build the kernel, specify the path for the version of GCC with analyzer support (>=10) if it's not 
 the default installation, and include the option `-fanalyzer`.
